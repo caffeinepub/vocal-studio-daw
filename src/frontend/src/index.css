@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* DAW Dark Theme */
+    --background: 0.157 0.012 219;
+    --foreground: 0.931 0.009 220;
+    --card: 0.19 0.016 217;
+    --card-foreground: 0.931 0.009 220;
+    --popover: 0.218 0.018 217;
+    --popover-foreground: 0.931 0.009 220;
+    --primary: 0.736 0.117 186;
+    --primary-foreground: 0.157 0.012 219;
+    --secondary: 0.24 0.018 216;
+    --secondary-foreground: 0.931 0.009 220;
+    --muted: 0.218 0.018 217;
+    --muted-foreground: 0.727 0.014 218;
+    --accent: 0.296 0.019 216;
+    --accent-foreground: 0.931 0.009 220;
+    --destructive: 0.565 0.185 24;
+    --destructive-foreground: 0.931 0.009 220;
+    --border: 0.296 0.019 216;
+    --input: 0.24 0.018 216;
+    --ring: 0.736 0.117 186;
+    --chart-1: 0.736 0.117 186;
+    --chart-2: 0.527 0.186 276;
+    --chart-3: 0.712 0.149 60;
+    --chart-4: 0.565 0.185 24;
+    --chart-5: 0.832 0.181 148;
+    --sidebar: 0.19 0.016 217;
+    --sidebar-foreground: 0.931 0.009 220;
+    --sidebar-primary: 0.736 0.117 186;
+    --sidebar-primary-foreground: 0.157 0.012 219;
+    --sidebar-accent: 0.24 0.018 216;
+    --sidebar-accent-foreground: 0.931 0.009 220;
+    --sidebar-border: 0.296 0.019 216;
+    --sidebar-ring: 0.736 0.117 186;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+      sans-serif;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.218 0.018 217);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.296 0.019 216);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.727 0.014 218);
+  }
+}
+
+.daw-knob {
+  cursor: pointer;
+  user-select: none;
+}
+
+.timeline-clip {
+  cursor: grab;
+}
+.timeline-clip:active {
+  cursor: grabbing;
+}
